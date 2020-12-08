@@ -34,4 +34,6 @@ tunggu sebentar, nanti otomatis buka halaman web dengan alamat localhost:3000
 ######
 selanjutnya, download zip repository ini, kemudian seluruh file baik itu public, src dicopy pada project local yang sudah dibuat.
 ###
-dan tinggal jalankan dengan npm start
+selanjutnya, ketikkaan npm install @sentry/browser@5.6.2
+###
+kalau sudah selesai, jalankan dengan cara npm start
