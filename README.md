@@ -17,8 +17,8 @@ jika posisi sudah di folder tersebut, ketikkan perintah
 ######
 npm install -g create-react-app
 untuk cek sukses / tidak, ketikan perintah:
-######
 create-react-app --version
+######
 3. Buat project react js
 ketikkan perintah
 ##
