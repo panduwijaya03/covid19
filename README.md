@@ -30,3 +30,6 @@ npm start
 ##
 tunggu sebentar, nanti otomatis buka halaman web dengan alamat localhost:3000
 ##
+
+######
+selanjutnya, download zip repository ini, kemudian seluruh file baik itu public, src dicopy pada project local yang sudah dibuat.
