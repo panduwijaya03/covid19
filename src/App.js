@@ -17,7 +17,6 @@ const App = () => {
       <div class="nav-bar">
         <div class="brand">
           <a href="#hero"><h1><span>I</span>nformation <span>C</span>ovid-19</h1></a>
-
         </div>
         <div class="nav-list">
           <div class="hamburger"><div class="bar"></div></div>

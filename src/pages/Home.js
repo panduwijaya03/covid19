@@ -39,18 +39,56 @@ const Home = () => {
 	}, [counter])
 
 	return (
-		<div className='container'>
-			<div>
-				<div className='mt-5 mb-3 text-center'>
-					<h2>Live Data Global</h2>
-				</div>
+
+			
+	           <div className="row ">
+	           <div className="medium-12 columns">
+
+				<section id="header">
+			    <div class="header container">
+			      <div class="nav-bar">
+			        <div class="brand">
+			          <a href="#hero"><h1>Covid-19</h1></a>
+			         <h3>Live Data in INDONESIA</h3>
+			        </div>
+			        <div class="nav-list">
+			          <div class="hamburger">
+				          <div class="bar"></div>
+			          </div>
+			          <ul>
+			            <li><a href="#provinsi" data-after="PROVINSI">PROVINSI</a></li>
+			            <li><a href="#indonesia" data-after="INDONESIA">INDONESIA</a></li>
+			            <li><a href="#Global" data-after="GLOBAL">GLOBAL</a></li>
+			          </ul>
+			        </div>
+			      </div>
+			    </div>
+			  </section>
+			 
+			  <section id="hero">
+			    <div class="hero container">
+			    
+			     <div className='mt-5 mb-3 text-center'>
+					</div>
 				<Summary />
 				<br />
 				<p className='text-center'>
 		
 				</p>
-			</div>
-		</div>
+				</div>
+			  </section>
+
+
+			  <section id="footer">
+			    <div class="footer container">
+			      <p>Copyright © 2020 Blueberry</p>
+			    </div>
+			  </section>
+						
+			
+			  </div>
+             </div>
+
 	)
 }
 
