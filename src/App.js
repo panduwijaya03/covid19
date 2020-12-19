@@ -13,36 +13,30 @@ const App = () => {
 	return (
 		<div>
 			<Router>
-
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-       <div class="container">
-      <a class="navbar-brand" >Live Data Covid - 19</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home
-      
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/positif">Data Positif</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/sembuh"> Data Sembuh</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/meninggal"> Data Meninggal</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+           <div class="container">
+           <h1 class="navbar-brand">Live Data Covid - 19 </h1>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/positif">Data Positif</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/sembuh"> Data Sembuh</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/meninggal"> Data Meninggal</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
 
 				<Switch>
 					<Route exact path='/' component={Home} />
