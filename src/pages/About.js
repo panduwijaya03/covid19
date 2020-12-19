@@ -6,7 +6,7 @@ const About = () => {
 				 <div class="row text-center">
 			      <div class="col-lg-3 col-md-6 mb-4">
 			        <div class="card h-100">
-			          <img class="card-img-top" src="images/elis_0.JPG" alt="" />
+			          <img class="card-img-top" src="images/elis_0.jpg" alt="" />
 			          <div class="card-body">
 			            <h4 class="card-title">Elisabeth Hutabarat</h4>
 			            <p class="card-text">00000042524</p>
