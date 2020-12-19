@@ -34,13 +34,6 @@ export const CardData = ({ data, type = null }) => {
 							</p>
 						</>
 					) : null}
-					<a
-						href={`https://maps.google.com/?q=${data.lat},${data.long}`}
-						target='blank'
-						rel='noopener noreferrer'
-						className='btn btn-outline-primary btn-sm text-center'>
-						Show Map
-					</a>
 				</div>
 			</div>
 		</div>

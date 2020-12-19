@@ -4,44 +4,42 @@ import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 const Summary = () => {
-	const [summaryData, setSummaryData] = useState({
+	const [globalData, setglobalData] = useState({
 		data: {},
 		isLoading: true,
 	})
 
-	const getSummaryData = async () => {
+	const getglobalData = async () => {
 		try {
-			setSummaryData({ ...summaryData, isLoading: true })
+			setglobalData({ ...globalData, isLoading: true })
 			const response = await Axios.get('https://covid19.mathdro.id/api')
-			setSummaryData({ data: response.data, isLoading: false })
+			setglobalData({ data: response.data, isLoading: false })
 		} catch (error) {
 			console.log(error.response.data)
 		}
 	}
 
 	useEffect(() => {
-		getSummaryData()
-		// eslint-disable-next-line
+		getglobalData()
 	}, [])
 
 	return (
 		<div>
-			<p className='text-muted text-center'>
-				last update : {!summaryData.isLoading && moment(summaryData.data.lastUpdate).format('DD MMM YYYY HH:mm:ss')}{' '}
+			<h1>Global Data</h1>
+			<p>
+				Last Update : {!globalData.isLoading && moment(globalData.data.lastUpdate).format('DD MMM YYYY HH:mm:ss')}{' '}
 			</p>
 
 			<div className='row'>
 				<div className='col-sm-4 my-2'>
 					<div className='card mx-auto bg-warning' style={{ width: '18rem' }}>
 						<div className='card-body mx-auto'>
-							{!summaryData.isLoading && (
+							{!globalData.isLoading && (
 								<>
-									<h5 className='card-title text-light text-center'>Confirmed</h5>
-									<h2 className='card-title text-light text-center'>{summaryData.data.confirmed.value}</h2>
+									<h5 className='card-title text-light text-center'>Positif</h5>
+									<h2 className='card-title text-light text-center'>{globalData.data.confirmed.value}</h2>
 									<div className='mx-auto text-center'>
-										<Link to='/confirmed' className='btn btn-outline-light '>
-											Details
-										</Link>
+
 									</div>
 								</>
 							)}
@@ -51,19 +49,17 @@ const Summary = () => {
 				<div className='col-sm-4 my-2'>
 					<div className='card mx-auto bg-success' style={{ width: '18rem' }}>
 						<div className='card-body mx-auto'>
-							{!summaryData.isLoading && (
+							{!globalData.isLoading && (
 								<>
-									<h5 className='card-title text-light text-center'>Recovered</h5>
+									<h5 className='card-title text-light text-center'>Sembuh</h5>
 									<h2 className='card-title text-light text-center'>
-										{summaryData.data.recovered.value}{' '}
+										{globalData.data.recovered.value}{' '}
 										<span className='h6'>
-											({((summaryData.data.recovered.value / summaryData.data.confirmed.value) * 100).toFixed(2)}%)
+											({((globalData.data.recovered.value / globalData.data.confirmed.value) * 100).toFixed(2)}%)
 										</span>
 									</h2>
 									<div className='mx-auto text-center'>
-										<Link to='/recovered' className='btn btn-outline-light '>
-											Details
-										</Link>
+			
 									</div>
 								</>
 							)}
@@ -73,19 +69,17 @@ const Summary = () => {
 				<div className='col-sm-4 my-2'>
 					<div className='card mx-auto bg-danger' style={{ width: '18rem' }}>
 						<div className='card-body mx-auto'>
-							{!summaryData.isLoading && (
+							{!globalData.isLoading && (
 								<>
-									<h5 className='card-title text-light text-center'>Deaths</h5>
+									<h5 className='card-title text-light text-center'>Meninggal</h5>
 									<h2 className='card-title text-light text-center'>
-										{summaryData.data.deaths.value}{' '}
+										{globalData.data.deaths.value}{' '}
 										<span className='h6'>
-											({((summaryData.data.deaths.value / summaryData.data.confirmed.value) * 100).toFixed(2)}%)
+											({((globalData.data.deaths.value / globalData.data.confirmed.value) * 100).toFixed(2)}%)
 										</span>
 									</h2>
 									<div className='mx-auto text-center'>
-										<Link to='/deaths' className='btn btn-outline-light '>
-											Details
-										</Link>
+	
 									</div>
 								</>
 							)}

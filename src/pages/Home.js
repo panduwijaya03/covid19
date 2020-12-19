@@ -4,90 +4,102 @@ import Card from '../components/Card'
 import Summary from '../components/Summary'
 
 const Home = () => {
-	const [daily, setDaily] = useState({
-		data: [],
-		isLoading: true,
-	})
-
-	const [dailyView, setDailyView] = useState([])
-	const [counter, setCounter] = useState(3)
-
-	const getDaily = async () => {
-		try {
-			setDaily({ ...daily, isLoading: true })
-			const response = await axios.get('https://covid19.mathdro.id/api/daily')
-			setDaily({ data: response.data, isLoading: false })
-			setDailyView(response.data.reverse().slice(0, counter))
-		} catch (error) {
-			console.log(error.response.data)
-		}
-	}
-
-	const showMore = () => {
-		setCounter(counter => (counter > daily.data.length ? daily.data.length : counter + 3))
-	}
-
-	useEffect(() => {
-		getDaily()
-		// eslint-disable-next-line
-	}, [])
-
-	useEffect(() => {
-		const ar = daily.data
-		const newarr = ar.slice(0, counter)
-		setDailyView(newarr)
-	}, [counter])
 
 	return (
 
-			
-	           <div className="row ">
-	           <div className="medium-12 columns">
+			<div class="container"> 
+				 <header class="jumbotron my-4">
+				    <h1 class="display-3">
+					<Summary /></h1>
+				</header>
 
-				<section id="header">
-			    <div class="header container">
-			      <div class="nav-bar">
-			        <div class="brand">
-			          <a href="#hero"><h1>Covid-19</h1></a>
-			         <h3>Live Data in INDONESIA</h3>
-			        </div>
-			        <div class="nav-list">
-			          <div class="hamburger">
-				          <div class="bar"></div>
+
+				<div class="row text-center">
+				<div class="container"> 
+			      <h1>Tips Mencegah Penularan</h1>
+			      </div>
+			      <div class="col-lg-3 col-md-6 mb-4">
+			        <div class="card h-100">
+			          <img class="card-img-top" src="images/cuci tangan.png" alt="" />
+			          <div class="card-body">
+			            <h4 class="card-title">1. Cuci tangan</h4>
+			            <p class="card-text">Selalu rajin mencuci tangan bila menyentuh benda saat berpergian keluar rumah</p>
 			          </div>
-			          <ul>
-			            <li><a href="#provinsi" data-after="PROVINSI">PROVINSI</a></li>
-			            <li><a href="#indonesia" data-after="INDONESIA">INDONESIA</a></li>
-			            <li><a href="#Global" data-after="GLOBAL">GLOBAL</a></li>
-			          </ul>
+			          <div class="card-footer">
+			          </div>
 			        </div>
 			      </div>
-			    </div>
-			  </section>
+
+			      <div class="col-lg-3 col-md-6 mb-4">
+			        <div class="card h-100">
+			          <img class="card-img-top" src="images/pakai masker.png" alt="" />
+			          <div class="card-body">
+			            <h4 class="card-title">2. Memakai Masker</h4>
+			            <p class="card-text">Selalu menggunkan masker jika hendak berpergian keluar rumah dan mengganti masker secara berkala</p>
+			          </div>
+			          <div class="card-footer">
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-lg-3 col-md-6 mb-4">
+			        <div class="card h-100">
+			          <img class="card-img-top" src="images/jaga jarak.png" alt="" />
+			          <div class="card-body">
+			            <h4 class="card-title">3. Menjaga Jarak</h4>
+			            <p class="card-text">Selalu menjaga jarak dengan minimal 2 meter dengan orang lain</p>
+			          </div>
+			          <div class="card-footer">
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-lg-3 col-md-6 mb-4">
+			        <div class="card h-100">
+			          <img class="card-img-top" src="images/antis.png" alt="" />
+			          <div class="card-body">
+			            <h4 class="card-title">4. Membawa Antiseptic</h4>
+			            <p class="card-text">Selalu membawa Antiseptic dan menggunkannya jika menyentuh sesuatu</p>
+			          </div>
+			          <div class="card-footer">
+			          </div>
+			        </div>
+			      </div>
+
+			      <div class="col-lg-3 col-md-6 mb-4">
+			        <div class="card h-100">
+			          <img class="card-img-top" src="images/jaket.png" alt="" />
+			          <div class="card-body">
+			            <h4 class="card-title">5. Mengenakan Lengan Panjang</h4>
+			            <p class="card-text">Mengenakan pakaian lengan Panjang atau jaket apabila hendak pergi keluar rumah sehingga nanti kulit tidak bersentuhan dengan orang lain</p>
+			          </div>
+			          <div class="card-footer">
+			          </div>
+			        </div>
+			      </div>
+			 </div>
+
+
+
+
+			      <footer class="py-5 bg-dark">
+				    <div class="container">
+				      <p class="m-0 text-center text-white">Copyright &copy; Blueberry 2020</p>
+			    	</div>
+			  	</footer>
+
+			 </div>
 			 
-			  <section id="hero">
-			    <div class="hero container">
-			    
-			     <div className='mt-5 mb-3 text-center'>
-					</div>
-				<Summary />
-				<br />
-				<p className='text-center'>
-		
-				</p>
-				</div>
-			  </section>
 
-
-			  <section id="footer">
-			    <div class="footer container">
-			      <p>Copyright © 2020 Blueberry</p>
-			    </div>
-			  </section>
-						
 			
-			  </div>
-             </div>
+
+
+
+	     
+
+			            
+			 
+		
 
 	)
 }

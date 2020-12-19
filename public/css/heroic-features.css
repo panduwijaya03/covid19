@@ -1,0 +1,27 @@
+body {
+  	padding-top: 56px;
+	background-color: #1a1a2e;
+}
+
+header  {
+  	background-image: url(../images/corona.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	background-color: #1a1a2e;
+}
+
+
+footer {
+	background-color: #1a1a2e;
+}
+
+nav.nav-link ul.active {
+	background-color: #1a1a2e;
+	left: 0%;
+}
+
+h1 {
+	color: #ffffff;
+}
