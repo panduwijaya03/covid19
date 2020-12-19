@@ -34,6 +34,7 @@ const Recovered = () => {
 
 	useEffect(() => {
 		getSembuhData()
+		// eslint-disable-next-line
 	}, [])
 
 	return (

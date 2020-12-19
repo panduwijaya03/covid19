@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
-import { Link } from 'react-router-dom'
 import moment from 'moment'
 
-const Summary = () => {
+const Index = () => {
 	const [globalData, setglobalData] = useState({
 		data: {},
 		isLoading: true,
@@ -21,6 +20,7 @@ const Summary = () => {
 
 	useEffect(() => {
 		getglobalData()
+		// eslint-disable-next-line
 	}, [])
 
 	return (
@@ -91,4 +91,4 @@ const Summary = () => {
 	)
 }
 
-export default Summary
+export default Index

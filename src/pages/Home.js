@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Card from '../components/Card'
-import Summary from '../components/Summary'
+import React from 'react'
+import Index from '../components/Index'
 
 const Home = () => {
 
@@ -10,7 +8,7 @@ const Home = () => {
 			<div class="container"> 
 				 <header class="jumbotron my-4">
 				    <h1 class="display-3">
-					<Summary /></h1>
+					<Index /></h1>
 				</header>
 
 

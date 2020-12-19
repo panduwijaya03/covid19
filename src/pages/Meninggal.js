@@ -35,6 +35,7 @@ const Death = () => {
 
 	useEffect(() => {
 		getMeninggalData()
+		// eslint-disable-next-line
 	}, [])
 
 	return (

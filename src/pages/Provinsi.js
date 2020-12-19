@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Card from '../components/Card'
-import Summary from '../components/Summary'
 
 const Home = () => {
 	const [daily, setDaily] = useState({
@@ -23,9 +21,6 @@ const Home = () => {
 		}
 	}
 
-	const showMore = () => {
-		setCounter(counter => (counter > daily.data.length ? daily.data.length : counter + 3))
-	}
 
 	useEffect(() => {
 		getDaily()
